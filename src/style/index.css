@@ -1,0 +1,49 @@
+@import url('//fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FAFAFA;
+	font-family: 'IBM Plex Sans', 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+table {
+  table-layout: auto;
+}
+
+th, td {
+  text-align: left;
+}
+
+.ant-table th {
+  font-weight: bold !important;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 14px 14px;
+}
+
+.container {
+	height: 100%;
+	padding: 0px;
+}
+
+.box {
+  height: 100%;
+  padding: 10px;
+}
+
+.drawer {
+  position: absolute !important;
+  height: 140px;
+}
