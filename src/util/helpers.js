@@ -5,7 +5,7 @@ export const listFormatPolyfill = (arr) =>
 
 export const twoLevelsUniqFlatMap = (arr, field1, field2, defaultValue) =>
   Array.from(
-    new Set(arr.flatMap((obj) => obj[field1][field2] || defaultValue)),
+    new Set(arr.flatMap((obj) => obj?.[field1]?.[field2] || defaultValue)),
   );
 
 export const toggleRepoDetailsVisibleEx = (setRepoDetailsVisible) => (

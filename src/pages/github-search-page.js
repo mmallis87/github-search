@@ -67,9 +67,13 @@ const GithubSearchPage = () => {
       setRepoDetails([]);
       setErrorMessage('');
       try {
-        const commits = await getRepoCommits(repo.commits_url);
-        const { owner } = await getLastRepoFork(repo.forks_url);
-        const { bio } = await getUser(owner.url);
+        const [commits, lastRepoFork, ownerUser] = await Promise.all([
+          getRepoCommits(repo.commits_url),
+          getLastRepoFork(repo.forks_url),
+          getUser(repo.owner.url),
+        ]);
+        const { owner } = lastRepoFork;
+        const { bio } = ownerUser;
 
         const formattedCommitUsers = listFormatPolyfill(
           twoLevelsUniqFlatMap(commits, 'author', 'login', UNKNOWN_USER),
