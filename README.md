@@ -8,6 +8,11 @@ Note: the number of libraries used in this project is kept intentionally small t
 ## CLI Commands
 
 ```shell script
+nvm install 14.0
+nvm use 14.0
+```
+
+```shell script
 # install dependencies
 yarn # or npm install
 
@@ -22,6 +27,11 @@ yarn run serve # or npm run serve
 
 # run tests with jest, enzyme and preact-render-spy
 yarn run test # or npm run test
+```
+
+```shell script
+cd build
+surge
 ```
 
 ## Code guide
